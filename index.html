@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parallax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="page">
+            <div class="parallax">
+                <div class="parallax__montain parallax__montain_1"></div>
+                <div class="parallax__montain parallax__montain_2"></div>
+                <div class="parallax__montain parallax__montain_3"></div>
+                <div class="parallax__fog"></div>
+            </div>
+            <div class="contentt">
+                <div class="content__body">
+                    <div class="content__article">
+
+                       
+                       
+                        <section class="hero">
+                            <div class="hero-text">
+                                <h1>Lorem ipsum dolor sit amet</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo perferendis sequi, provident doloribus, illo pariatur quas impedit aperiam temporibus doloremque.</p>
+                                <a href="" class="btn from-center">Check out</a>
+                                <a href="" class="btn from-center">Read more</a>
+                            </div>
+                            <div class="hero-img">
+                                <img src="images/tiktok_PNG30.png" alt="">
+                            </div>
+                        </section>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <section class="block SLider">
+                           <button type="button" class="prev btn from-center"><i class="fas fa-angle-left"></i></button>
+                           <button type="button" class="next btn from-center"><i class="fas fa-angle-right"></i></button>
+                            <div class="block-content sliders">
+                                <div class="block-inner slides ">
+                                    <img src="images/youtube_PNG11.png" class="block-img" alt="">
+                                    <span>YOUTUBE</span>
+                                    <p>Molestiae provident iusto maiores sit, soluta alias. Repellendus perferendis necessitatibus voluptates in nihil ipsum.</p>
+                                    <div class="block-btn">Read more</div>
+                                </div>
+                                <div class="block-inner slides">
+                                    <img src="images/instagram_PNG3.png" class="block-img" alt="">
+                                    <span>INSTAGRAM</span>
+                                    <p>Dicta quas blanditiis repudiandae placeat, reiciendis a? Architecto vitae quisquam magnam ea, sit eius.</p>
+                                    <div class="block-btn">Read more</div>
+                                </div>
+                                <div class="block-inner slides active">
+                                    <img src="images/linkedIn_PNG27.png" class="block-img" alt="">
+                                    <span>LINKEDIN</span>
+                                    <p>Porro incidunt dolores voluptas, aliquid officiis quae! Laboriosam eligendi, tenetur pariatur cupiditate, officiis est!</p>
+                                    <div class="block-btn">Read more</div>
+                                </div>
+                            </div>
+                        </section>
+ <footer class="footer">
+     <div class="footer-text">
+          <small>©</small><p>Turpal Alikhadzhiev 2021.</p>
+     </div>
+ </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function Slider() {
+            let back = document.querySelector('.prev')
+            let go   = document.querySelector('.next')
+            let items= document.querySelectorAll('.slides')
+            let i = 0;
+            go.addEventListener('click', () => {
+                i++
+                if (items.length -1 < i) {
+                    i = 0
+                }
+                items.forEach(item => {
+                    item.classList.remove('active')
+                })
+                items[i].classList.add('active') 
+            }) 
+            back.addEventListener('click', () => {
+                i++
+                if (items.length -1 < i) {
+                    i = 0
+                }
+                items.forEach(item => {
+                    item.classList.remove('active')
+                })
+                items[i].classList.add('active')
+                console.log(i)
+            })  
+        }
+        Slider()
+    </script>
+<script>
+    const body = document.body,
+                scrollWrap = document.getElementsByClassName("contentt")[0],
+                height = scrollWrap.getBoundingClientRect().height - 1,
+                speed = 0.04;
+
+            var offset = 0;
+
+            body.style.height = Math.floor(height) + "px";
+
+            function smoothScroll() {
+                offset += (window.pageYOffset - offset) * speed;
+
+                var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                scrollWrap.style.transform = scroll;
+
+                callScroll = requestAnimationFrame(smoothScroll);
+            }
+
+            smoothScroll();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slick.min.js"></script>
+</body>
+</html>
