@@ -8,6 +8,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+
 html,
 body {
     height: 100%;
@@ -303,14 +304,17 @@ a {
         background-size: cover;
         position: fixed;
     }
+
     .parallax__montain_2 {
         z-index: 1;
         background: url('images/m_2.png') bottom right / 60% no-repeat;
     }
+
     .parallax__montain_3 {
         z-index: 1;
         background: url('images/m_3.png') left bottom / 150% no-repeat;
     }
+
     .parallax__fog {
         background: url('images/fog_1.png') bottom / 300% no-repeat;
         position: fixed;
@@ -319,30 +323,38 @@ a {
         top: 0;
         left: 0;
     }
+
     .content__body {
         max-width: 450px;
     }
+
     .hero {
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
+
     .hero-img img {
         width: 150px;
         height: 150px;
     }
+
     .btn {
         padding: 10px 10px;
     }
+
     .hero-text h1 {
         font-size: 25px;
     }
+
     .btn:hover {
         color: black;
     }
+
     .btn:hover:after {
         background: aqua;
     }
+
     .from-center:before {
         top: 0;
         left: 50%;
@@ -352,9 +364,11 @@ a {
         border-left: 0;
         border-right: 0;
     }
+
     .from-center:after {
         background: aqua;
     }
+
     /*                slider                     */
     .SLider button {
         background: transparent;
@@ -368,35 +382,44 @@ a {
         cursor: pointer;
         transition: .3s;
     }
+
     .SLider button.prev {
         left: 35px;
     }
+
     .SLider button.next {
         left: auto;
         right: 35px;
     }
+
     .slides {
         position: absolute;
         opacity: 0;
         transition: .3s;
     }
+
     .sliders {
         transition: .5s;
     }
+
     .sliders:hover {
         transform: translateY(-10px);
         background: red;
     }
+
     .block-inner:hover {
         transform: translateY(0px);
     }
+
     .sliders .slides.active {
         opacity: 1;
     }
+
     .fas {
         padding: 5px;
         font-size: 20px;
     }
+
     .footer {
         display: flex;
         justify-content: center;
@@ -405,6 +428,7 @@ a {
         padding-top: 0px;
         height: 0vh;
     }
+
     .content__article {
         background: RGBA(0, 0, 0, 0.25);
         font-size: 18px;
@@ -414,39 +438,47 @@ a {
         height: 1250px;
     }
 }
+
 @media only screen and (min-width: 200px) and (max-width: 470px) {
-        .btn {
-    padding: 10px 10px;
-}
-    .SLider button {
-            top: 78%;
+    .btn {
+        padding: 10px 10px;
     }
+
+    .SLider button {
+        top: 78%;
+    }
+
     .SLider button.prev {
-    left: -7px;
-}
+        left: -7px;
+    }
+
     .SLider button.next {
-    left: auto;
-    right: -7px;
-}
+        left: auto;
+        right: -7px;
+    }
+
     .footer {
-    display: flex;
-    justify-content: center;
-    transform: translateY(388px);
-    color: white;
-    padding-top: 0px;
-    height: 108vh;
-}
+        display: flex;
+        justify-content: center;
+        transform: translateY(388px);
+        color: white;
+        padding-top: 0px;
+        height: 108vh;
+    }
+
     .hero-img img {
-    display: none;
-}
+        display: none;
+    }
+
     .hero-text {
-    text-align: left;
-    color: #ccc;
-    max-width: 100%;
+        text-align: left;
+        color: #ccc;
+        max-width: 100%;
         padding: 10px;
-}
+    }
+
     .content__article {
-    height: 1160px;
-}
+        height: 1160px;
+    }
 
 }
